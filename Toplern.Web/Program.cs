@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Toplern.Datalayer.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+string CS = builder.Configuration.GetConnectionString("TopLearnConnection");
+
+builder.Services.AddDbContext<ToplernContext>(op => op.UseSqlServer(CS));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
