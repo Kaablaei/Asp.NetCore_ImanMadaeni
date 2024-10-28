@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Conventors\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Services\" />
     <Folder Include="Security\" />
   </ItemGroup>
 
